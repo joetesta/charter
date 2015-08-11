@@ -410,7 +410,7 @@ Sub PaintFullscreenCanvas()
         starttime = "11:00 AM"
         endtime = "1:00 PM"
         
-        ' Calculatation for the time display and for the orange bar
+        ' Calculation for the time display and for the orange bar
         print m.position " is the current position in seconds"
         ' Set time bars gray by default
         bar2color = "#FF999999"

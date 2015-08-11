@@ -1,0 +1,36 @@
+{
+	"Videos" : [
+		{
+			"Title" : "Sherlock",
+			"Image" : "http://rokudev.roku.com/rokudev/examples/videoplayer/images/JeffHan.jpg",
+			"Tag"   : "NEW",
+			"Episode" : "Breaking the glass (S2 E12)",
+			"Desc"  : "When the high-profile producer turns up missing, the women follow a trail of broken glass while...",
+			"Url"	: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
+		},
+		{
+			"Title" : "Mad Men",
+			"Image" : "http://rokudev.roku.com/rokudev/examples/videoplayer/images/JeffHan.jpg",
+			"Tag"   : "NEW",
+			"Episode" : "Burden of Proof (S5 E12)",
+			"Desc"  : "A notable county prosecutor is arrested for murder, and as the case against him grows increasingly...",
+			"Url"	: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
+		},
+		{
+			"Title" : "Modern Family",
+			"Image" : "http://rokudev.roku.com/rokudev/examples/videoplayer/images/JeffHan.jpg",
+			"Tag"   : "",
+			"Episode" : "Seashore Prisoner (S4 E5)",
+			"Desc"  : "The kids are lost on the beach, but their parents are too busy fighting over cooking to notice...",
+			"Url"	: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
+		},
+		{
+			"Title" : "Running With Cats",
+			"Image" : "http://rokudev.roku.com/rokudev/examples/videoplayer/images/JeffHan.jpg",
+			"Tag"   : "UNSEEN",
+			"Episode" : "Castaway cats (S1 E2)",
+			"Desc"  : "This week in RWC, Maggie won't take her medicine and Nibbles has a new escape route through the...",
+			"Url"	: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
+		}
+	]
+}

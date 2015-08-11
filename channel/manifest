@@ -1,0 +1,12 @@
+title=CharterPOC
+subtitle=A proof of concept
+mm_icon_focus_hd=pkg:/images/poc-logo1.png
+mm_icon_side_hd=pkg:/images/poc-logo1.png
+mm_icon_focus_sd=pkg:/images/poc-logo1.png
+mm_icon_side_sd=pkg:/images/poc-logo1.png
+splash_screen_hd=pkg:/images/poc-logo1.png
+splash_screen_sd=pkg:/images/poc-logo1.png
+splash_color=#AAAAAA
+major_version=1
+minor_version=1
+build_version=00001

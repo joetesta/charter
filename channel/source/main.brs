@@ -11,7 +11,7 @@ Sub RunUserInterface()
     o = Setup()
     o.setup()
     o.paint()
-	' listen for events
+    ' listen for events
     o.eventloop()
 End Sub
 

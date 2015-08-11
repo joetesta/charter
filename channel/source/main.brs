@@ -7,13 +7,13 @@
 
 ' Channel entry point
 Sub RunUserInterface()
-	' create the global object
-	o = Setup()
-	' setup the screen canvas
+    ' create the global object
+    o = Setup()
+    ' setup the screen canvas
     o.setup()
-	' show the screen and start the video
+    ' show the screen and start the video
     o.paint()
-	' monitor events and wait for user input
+    ' monitor events and wait for user input
     o.eventloop()
 End Sub
 
@@ -90,7 +90,7 @@ Sub EventLoop()
                 if index = 4    '<LEFT>
                     print "left pressed, navigate controls"                 
                     if m.sideOverlay
-						m.sideOverlay = false
+                        m.sideOverlay = false
                         m.overlay = true
                         m.controlState = 4
                         m.paint()
@@ -420,12 +420,12 @@ Sub PaintFullscreenCanvas()
         
         ' the width of the bar highlighted orange is barwidth times m.position divided by half hour (1800 sec)
         ' 0 makes it unlimited width so use 1 in that case:
-		if m.position
+        if m.position
             worange = int( barwidth * m.position / 1800 )
         else
-		    worange = 1
-		end if
-		
+            worange = 1
+        end if
+        
         print "width of orange on the second time bar is " str(worange)
         
         ' Format the current time display

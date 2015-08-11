@@ -9,11 +9,9 @@
 Sub RunUserInterface()
     ' create the global object
     o = Setup()
-    ' setup the screen canvas
     o.setup()
-    ' show the screen and start the video
     o.paint()
-    ' monitor events and wait for user input
+	' listen for events
     o.eventloop()
 End Sub
 

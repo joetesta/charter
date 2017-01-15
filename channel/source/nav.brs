@@ -75,13 +75,8 @@ Sub PaintNav()
 		}
 	]
 
-	if (m.progress < 100)
-		m.canvas.ClearLayer(3)
-		m.canvas.SetLayer(3, navItems)
-    else
-		m.canvas.ClearLayer(2)
-		m.canvas.SetLayer(2, navItems)
-    endif
+	m.canvas.SetLayer(3, navItems)
+
 	
 	navItems.Clear()
 End Sub

@@ -11,8 +11,13 @@ Sub PaintFullscreenCanvas()
 	'Clear previous contents
     m.canvas.ClearLayer(0)
     m.canvas.ClearLayer(1)
-    m.canvas.ClearLayer(2)
-	m.canvas.ClearLayer(3)
+    
+    if m.previousControl <> m.currentControl
+	    ' control changed; clear controls layers '
+	    m.canvas.ClearLayer(2)
+		m.canvas.ClearLayer(3)
+		m.previousControl = m.currentControl
+	end if
 
 	' display a custom loading image
     if m.progress < 100
@@ -23,6 +28,7 @@ Sub PaintFullscreenCanvas()
     endif
 
 	if m.overlay
+		m.currentControl = "overlay"
 		' Display overlay with a list of canvasItems
 		' Get the canvas size to work with
 		canvasRect = m.targetRect
@@ -248,6 +254,7 @@ Sub PaintFullscreenCanvas()
         }
 		]
 	else if m.sideOverlay
+		m.currentControl = "sideoverlay"
 		' show side overlay
 		canvasRect = m.targetRect
 		' cover less than half the canvas - xVal is the coverage area
@@ -346,7 +353,7 @@ Sub PaintFullscreenCanvas()
 		' loop over the shows and add to the canvasItems to be displayed
 		yTxt = 150
 		index = 0
-		for each show in m.feedData.Videos
+		for each showitem in m.feedData.Videos
 		    if index = m.playing
 				textColor = "#FF4169E1"
 				' Put a box around the selected title
@@ -371,7 +378,7 @@ Sub PaintFullscreenCanvas()
 		      textColor = "#FFFFFFFF"
 		    endif
     		canvasItems.Push({
-    			Text: show.title
+    			Text: showitem.title
     			TextAttrs: {color: textColor, font: "Small", HAlign:"Left", VAlign:"VCenter",
             Direction:"LeftToRight"}
     			TargetRect: {x:xoffset+120, y:yTxt, w: 500, h: 100}
@@ -381,17 +388,19 @@ Sub PaintFullscreenCanvas()
 		end for
 
 	else
+		m.currentControl = "none"
 		' No overlay
 		canvasItems = []
 	endif
 	
 	m.canvas.SetLayer(0, { Color: "#00000000", CompositionMode: "Source" })
+
     if (splash.Count() > 0)
         m.canvas.SetLayer(1, splash)
-        m.canvas.SetLayer(2, canvasItems)
-    else
-        m.canvas.SetLayer(1, canvasItems)
-    endif
+    end if
+
+    ' now we always use layer 2 for controls, layer 3 for nav buttons '
+    m.canvas.SetLayer(2, canvasItems)
 	
 	' Show the nav controls on the bottom overlay
 	if m.overlay

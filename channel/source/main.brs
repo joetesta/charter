@@ -38,6 +38,8 @@ Sub Setup() As Object
 		nav:	   PaintNav
 		overlay:  false
 		sideOverlay: false
+		currentControl: "none"
+		previousControl: "none"
         eventloop: EventLoop
     }
 
